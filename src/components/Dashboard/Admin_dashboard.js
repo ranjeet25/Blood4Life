@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Contractform from "./Contractform";
+import DonarList from "./DonarList";
 // import AddStudentInfo from "../Components/AddStudentInfo";
-// import ChangePassword from "../Components/ChangePassword";
+// import donarListword from "../Components/donarListword";
 
-function Donar_dashboard() {
-  const [addInfo, setAddInfo] = useState(false);
+function Admin_dashboard() {
+  const [contractForm, setcontractForm] = useState(false);
   const [myDetails, setMyDetails] = useState(true);
-  const [changePass, setChangePass] = useState(false);
+  const [donarList, setdonarList] = useState(false);
   const [data, getData] = useState([]);
 
   return (
@@ -16,7 +18,7 @@ function Donar_dashboard() {
           <div className="p-2.5 mt-1 flex items-center">
             <i className="bi bi-app-indicator px-2 py-1 rounded-md bg-blue-600" />
             <h1 className="font-bold text-gray-200 text-[15px] ml-3">
-              Donar Panel
+              Blood Bank
             </h1>
           </div>
           <div className="my-2 bg-gray-400 h-[1px]" />
@@ -40,36 +42,42 @@ function Donar_dashboard() {
           className=" w-full p-2.5 mt-8 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-gray-700 hover:bg-blue-600 text-black"
           onClick={() => {
             setMyDetails(true);
-            setAddInfo(false);
-            setChangePass(false);
+            setcontractForm(false);
+            setdonarList(false);
           }}
         >
           <span className="text-[15px] ml-4 text-gray-200 font-bold">
-            My details
+            Instructions
           </span>
         </button>
         <div
           className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-gray-700 hover:bg-red-400 text-black"
           onClick={() => {
-            setChangePass(true);
+            setdonarList(false);
             setMyDetails(false);
-            setAddInfo(false);
+            setcontractForm(true);
           }}
         >
           <span className="text-[15px] ml-4 text-gray-200 font-bold">
-            Change Password
+            Add New Donar
           </span>
         </div>
         <div
           className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-gray-700 hover:bg-green-500 text-black"
           onClick={() => {
-            setAddInfo(true);
+            setcontractForm(false);
             setMyDetails(false);
-            setChangePass(false);
+            setdonarList(true);
           }}
         >
           <span className="text-[15px] ml-4 text-gray-200 font-bold">
-            Add Info
+            View Donar List
+          </span>
+        </div>
+        <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  bg-white hover:bg-blue-300 ">
+          <i className="bi bi-box-arrow-in-right" />
+          <span className=" text-[15px] ml-4 text-gray-600 font-bold">
+            Visit VerbWire
           </span>
         </div>
         <Link to="/">
@@ -83,41 +91,63 @@ function Donar_dashboard() {
       </div>
 
       {myDetails && (
-        <div className="flex mt-8 ml-24 justify-center w-3/4 h-auto flex-wrap ">
+        <div className="flex mt-8 ml-24 justify-center w-[80vw] h-auto flex-wrap ">
+          <div className="bg-white py-6 sm:py-8 lg:py-12">
+            <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+              <div className="rounded-lg bg-gray-100 px-4 py-6 md:py-8 lg:py-12">
+                <p className="mb-2 text-center font-semibold text-indigo-500 md:mb-3 lg:text-lg">
+                  Introducing
+                </p>
+                <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
+                  Revolutionary way to build the web
+                </h2>
+                <p className="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
+                  This is a section of some simple filler text, also known as
+                  placeholder text. It shares some characteristics of a real
+                  written text but is random or otherwise generated.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* BOX 01 */}
-          <div className="w-80 h-2/4 mx-2 bg-gray-100 rounded-xl border-2  border-gray-200 flex flex-col ">
+          <div className="w-80 h-1/4 mx-2 bg-gray-100 rounded-xl border-2  border-gray-200 flex flex-col ">
             <div className="bg-gray-100 h-1/4 flex justify-center items-center">
-              <p className="text font-bold text-gray-800">Room Number</p>
+              <p className="text-xl font-bold text-gray-800">Step 01</p>
             </div>
             <div className="bg-blue-200 h-3/4 flex justify-center items-center">
-              <p className=" font-bold text-6xl text-blue-600">room_number</p>
+              <p className=" font-bold text-2xl text-blue-600">Add Donar </p>
             </div>
           </div>
           {/* BOX 02 */}
-          <div className="w-80 h-2/4 mx-2 bg-gray-100 rounded-xl border-2  border-gray-200 flex flex-col ">
+          <div className="w-80 h-1/4 mx-2 bg-gray-100 rounded-xl border-2  border-gray-200 flex flex-col ">
             <div className="bg-gray-100 h-1/4 flex justify-center items-center">
-              <p className="text-xl font-bold text-gray-800">Room Type</p>
+              <p className="text-xl font-bold text-gray-800">Step 02</p>
             </div>
             <div className="bg-yellow-200 h-3/4 flex justify-center items-center">
-              <p className=" font-bold text-6xl text-yellow-600">room_type</p>
+              <p className=" font-bold text-2xl text-yellow-600">
+                Create a Smart contract
+              </p>
             </div>
           </div>
           {/* BOX 03 */}
-          <div className="w-80 h-2/4 mx-2 bg-gray-100 rounded-xl border-2  border-gray-200 flex flex-col ">
+          <div className="w-80 h-1/4 mx-2 bg-gray-100 rounded-xl border-2  border-gray-200 flex flex-col ">
             <div className="bg-gray-100 h-1/4 flex justify-center items-center">
               <p className="text-xl font-bold text-gray-800">College ID</p>
             </div>
             <div className="bg-green-200 h-3/4 flex justify-center items-center">
-              <p className=" font-bold text-6xl text-green-600">collegeId</p>
+              <p className=" font-bold text-2xl text-green-600">
+                Deploy using Verbwire
+              </p>
             </div>
           </div>
         </div>
       )}
-      {/* 
-      {addInfo && <AddStudentInfo></AddStudentInfo>}
-      {changePass && <ChangePassword></ChangePassword>} */}
+
+      {contractForm && <Contractform></Contractform>}
+      {donarList && <DonarList></DonarList>}
     </div>
   );
 }
 
-export default Donar_dashboard;
+export default Admin_dashboard;

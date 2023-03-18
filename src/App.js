@@ -1,18 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import Herosection from './components/Herosection';
-import Block from './components/Block.js'
-import Footer from './components/Footer.js'
-import Flotingnavbar from './components/Flotingnavbar.js'
+import logo from "./logo.svg";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Herosection from "./components/Herosection";
+
+import Flotingnavbar from "./components/Flotingnavbar.js";
 
 function App() {
   return (
-    <div className="App">
-      <Herosection/>
-      <Block/>
-      <Footer/>
-      {/* <Flotingnavbar/> */}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Herosection />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

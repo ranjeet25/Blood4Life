@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Block() {
   return (
-    <div className="h-screen flex justify-centre items-centre ">
+    <div className="lg:h-screen flex justify-centre items-centre ">
       <div className=" py-6 sm:py-8 lg:py-12 bg-gray-100 ">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           {/* <!-- text - start --> */}
@@ -20,8 +20,7 @@ export default function Block() {
           {/* <!-- text - end --> */}
 
           <div className="grid gap-12 sm:grid-cols-2 xl:grid-cols-3 xl:gap-16">
-            {/* <!-- feature - start --> */}
-            <div className="flex flex-col items-center shadow-md px-6 py-8 bg-white rounded-xl  ">
+            <div className="flex flex-col items-center shadow-md px-6 py-8 bg-white rounded-  ">
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-500 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -53,10 +52,8 @@ export default function Block() {
                 More
               </a>
             </div>
-            {/* <!-- feature - end -->
 
-            <!-- feature - start --> */}
-            <div className="flex flex-col items-center shadow-md px-6 py-8 bg-white rounded-xl">
+            <div className="flex flex-col items-center shadow-md px-6 py-8 bg-white rounded-">
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-500 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +86,7 @@ export default function Block() {
               </a>
             </div>
 
-            <div className="flex flex-col items-center shadow-md px-6 py-8 bg-white rounded-xl">
+            <div className="flex flex-col items-center shadow-md px-6 py-8 bg-white rounded-">
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-500 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

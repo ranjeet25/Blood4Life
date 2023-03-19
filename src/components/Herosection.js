@@ -44,7 +44,7 @@ export default function Herosection() {
                 href="#"
                 className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
-                Pricing
+                Web3
               </a>
               <a
                 href="#"
@@ -56,10 +56,10 @@ export default function Herosection() {
             {/* nav - end */}
             {/* buttons - start */}
             <a
-              href="#"
+              href="/login"
               className="hidden rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:inline-block"
             >
-              Contact Sales
+              Login
             </a>
             <button
               type="button"
@@ -84,7 +84,7 @@ export default function Herosection() {
           <section className="min-h-96 relative flex flex-1 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gray-100 py-16 shadow-lg md:py-20 xl:py-48">
             {/* image - start */}
             <img
-              src="https://images.unsplash.com/photo-1618004652321-13a63e576b80?auto=format&q=75&fit=crop&w=1500"
+              src="https://img.freepik.com/free-photo/hands-digital-universe-background_53876-97068.jpg?w=996&t=st=1679194887~exp=1679195487~hmac=7adc49492f03b3f214e43935843bca2d92a922ca0db42cf6c16d89fa5a70ec2e"
               loading="lazy"
               alt="Photo by Fakurian Design"
               className="absolute inset-0 h-full w-full object-cover object-center"
@@ -95,15 +95,19 @@ export default function Herosection() {
             {/* overlay - end */}
             {/* text start */}
             <div className="relative flex flex-col items-center p-4 sm:max-w-xl">
-              <p className="mb-4 text-center text-lg text-indigo-200 sm:text-xl md:mb-8">
-                Very proud to introduce
-              </p>
-              <h1 className="mb-8 text-center text-4xl font-bold text-white sm:text-5xl md:mb-12 md:text-6xl">
-                Revolutionary way to build the web
+              <p className="text-white">Powered By</p>
+              <img
+                className="h-8 mb-4"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGeiU-7tLwkYWxCJtur18SQL8AVCsQ0SCusWFHEerdUTyESOW_"
+              ></img>
+
+              <h1 className="mb-8 text-center text-3xl font-bold text-white sm:text-5xl md:mb-12 md:text-4xl">
+                A Revolutionary way to Donate and Manage Blood
               </h1>
+
               <div className="flex w-full flex-col gap-2.5 sm:flex-row sm:justify-center">
                 <a
-                  href="#"
+                  href="#intro"
                   className="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base"
                 >
                   Start now
@@ -120,7 +124,7 @@ export default function Herosection() {
           </section>
         </div>
       </div>
-      <Intro></Intro>
+      <Intro id="intro"></Intro>
       <Block></Block>
 
       <Footer></Footer>

@@ -4,11 +4,11 @@ function Contractform() {
   const [formData, setFormData] = useState({
     firstname: " ",
     lastname: " ",
-    year_ofStudy: " ",
-    branch: " ",
-    year_ofJoining: " ",
-    collegeId: " ",
-    payment_status: " ",
+    blood_group: " ",
+    age_group: " ",
+    date: " ",
+    adhaarID: " ",
+    amount: " ",
   });
 
   const changeEventHandler = (event) => {
@@ -29,17 +29,17 @@ function Contractform() {
   const sendData = (e) => {
     e.preventDefault();
 
-    // console.log(formData);
+    console.log(formData);
 
-    // fetch("http://localhost:5000/addStudentInfo", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(formData),
-    // }).then((res) => {
-    //   console.log(res);
-    // });
+    fetch("http://localhost:8000/data", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    }).then((res) => {
+      console.log(res);
+    });
 
     alert("data submited");
     // navigate("/login");
@@ -78,81 +78,77 @@ function Contractform() {
               htmlFor="Email"
               className="block text-xs font-medium text-gray-700"
             >
-              year Of Study
+              Blood Group
             </label>
             <select
               className="mt-1 w-full h-10 px-3 border border-gray-300  rounded-md shadow-sm sm:text-sm"
               onChange={changeEventHandler}
-              name="year_ofStudy"
+              name="blood_group"
             >
               <option>Select</option>
-              <option>First</option>
-              <option>second</option>
-              <option>Third</option>
-              <option>Fourth</option>
+              <option>A+</option>
+              <option>A-</option>
+              <option>B+</option>
+              <option>B-</option>
+              <option>AB+</option>
+              <option>AB-</option>
             </select>
           </div>
           {/* Email */}
           <div className="col-span-6">
             <label
-              htmlFor="branch"
+              htmlFor="age_group"
               className="block text-xs font-medium text-gray-700"
             >
-              Branch
+              Age Group
             </label>
             <select
               className="mt-1 w-full h-10 px-3 border border-gray-300  rounded-md shadow-sm sm:text-sm"
               onChange={changeEventHandler}
-              name="branch"
+              name="age_group"
             >
               <option>Select</option>
-              <option>Computer Science</option>
-              <option>Information Technology</option>
-              <option>Mechanical</option>
-              <option>civil</option>
-              <option>others</option>
+              <option>10-30</option>
+              <option>31-40</option>
+              <option>40-50</option>
             </select>
           </div>
           <div className="col-span-6">
             <label className="block text-xs font-medium text-gray-700">
-              year of joining
+              Date of Donation
             </label>
             <input
               type="text"
               id="hostelID"
               className="mt-1 w-full h-10 px-3 border border-gray-300  rounded-md shadow-sm sm:text-sm"
               onChange={changeEventHandler}
-              name="year_ofJoining"
+              name="date"
             />
           </div>
           {/* clg id */}
           <div className="col-span-6">
             <label className="block text-xs font-medium text-gray-700">
-              College ID
+              Adhaar ID
             </label>
             <input
               type="text"
               id="clgID"
               className="mt-1 w-full h-10 px-3 border border-gray-300  rounded-md shadow-sm sm:text-sm"
               onChange={changeEventHandler}
-              name="collegeId"
+              name="adhaarID"
             />
           </div>
           <div className="col-span-6">
             <label className="block text-xs font-medium text-gray-700">
-              payment Status
+              Amount of blood donated
             </label>
-            <select
+            <input
               id="year"
               className="mt-1 w-full h-10 px-3 border border-gray-300  rounded-md shadow-sm sm:text-sm"
-              placeholder="Select Role"
+              placeholder="eg. 250mL"
               onChange={changeEventHandler}
-              name="payment_status"
-            >
-              <option>select</option>
-              <option>Paid</option>
-              <option>Pending</option>
-            </select>
+              name="amount"
+            ></input>
           </div>
 
           <div className="col-span-6">

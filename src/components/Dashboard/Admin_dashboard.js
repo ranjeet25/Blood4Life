@@ -74,12 +74,14 @@ function Admin_dashboard() {
             View Donar List
           </span>
         </div>
-        <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  bg-white hover:bg-blue-300 ">
-          <i className="bi bi-box-arrow-in-right" />
-          <span className=" text-[15px] ml-4 text-gray-600 font-bold">
-            Visit VerbWire
-          </span>
-        </div>
+        <a href="https://www.verbwire.com/dashboard/home">
+          <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  bg-white hover:bg-blue-300 ">
+            <i className="bi bi-box-arrow-in-right" />
+            <span className=" text-[15px] ml-4 text-gray-600 font-bold">
+              Visit VerbWire
+            </span>
+          </div>
+        </a>
         <Link to="/">
           <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-gray-500 hover:bg-red-400 text-black">
             <i className="bi bi-box-arrow-in-right" />
@@ -99,12 +101,11 @@ function Admin_dashboard() {
                   Introducing
                 </p>
                 <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
-                  Revolutionary way to build the web
+                  Revolutionary way to Donate Blood
                 </h2>
                 <p className="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
-                  This is a section of some simple filler text, also known as
-                  placeholder text. It shares some characteristics of a real
-                  written text but is random or otherwise generated.
+                  Donate blood, and be helpful as it is said that the best among
+                  men are those who help others
                 </p>
               </div>
             </div>

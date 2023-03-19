@@ -1,31 +1,16 @@
-import FormData from "form-data";
-import fetch from "node-fetch";
-var formData = new FormData();
+const sdk = require("api")("@verbwire/v1.0#1v2exalfcs78nq");
 
-var data = "dghgdhgd";
-
-formData.append("chain", "mumbai");
-formData.append("contractType", "nft1155");
-formData.append("contractSymbol", "test");
-formData.append("contractName", data);
-formData.append(
-  "recipientAddress",
-  "0xef836059e44F8eE7a756E31f1bCD6852B9bEe639"
-);
-// formData.append('test', 'hello');
-
-const url = "https://api.verbwire.com/v1/nft/deploy/deploySimpleContract";
-const options = {
-  method: "POST",
-  headers: {
-    accept: "application/json",
-    "X-API-Key": "sk_live_402b045d-791b-40b9-a945-56455a722b77",
-  },
-};
-
-options.body = formData;
-
-fetch(url, options)
-  .then((res) => res.json())
-  .then((json) => console.log(json))
-  .catch((err) => console.error("error:" + err));
+sdk.auth("sk_live_10bec319-318c-4b3c-bd45-36300333102e");
+sdk
+  .postNftDeployDeploysimplecontract(
+    {
+      chain: "goerli",
+      contractType: "nft721",
+      contractName: "gffgf",
+      contractSymbol: "gf",
+      recipientAddress: "gffg",
+    },
+    { accept: "application/json" }
+  )
+  .then(({ data }) => console.log(data))
+  .catch((err) => console.error(err));

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
@@ -9,7 +10,7 @@ function Login() {
             Login
           </h2>
 
-          <form class="mx-auto max-w-lg rounded-lg border">
+          <div class="mx-auto max-w-lg rounded-lg border">
             <div class="flex flex-col gap-4 p-4 md:p-8">
               <div>
                 <label
@@ -36,10 +37,11 @@ function Login() {
                   class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
                 />
               </div>
-
-              <button class="block rounded-lg bg-gray-800 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-gray-300 transition duration-100 hover:bg-gray-700 focus-visible:ring active:bg-gray-600 md:text-base">
-                Log in
-              </button>
+              <Link to="/donar">
+                <button class="block rounded-lg bg-gray-800 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-gray-300 transition duration-100 hover:bg-gray-700 focus-visible:ring active:bg-gray-600 md:text-base">
+                  Log in
+                </button>
+              </Link>
 
               <div class="relative flex items-center justify-center">
                 <span class="absolute inset-x-0 h-px bg-gray-300"></span>
@@ -89,7 +91,7 @@ function Login() {
                 </a>
               </p>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
